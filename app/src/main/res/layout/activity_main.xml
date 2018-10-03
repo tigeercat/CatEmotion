@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fffcf0">
+
+    <Button
+        android:id="@+id/sad_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/scared_button"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/sadcat_button"
+        app:layout_constraintBottom_toTopOf="@+id/playful_button"
+        app:layout_constraintEnd_toStartOf="@+id/scared_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+    <Button
+        android:id="@+id/playful_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignStart="@+id/sleepy_button"
+        android:layout_alignTop="@+id/sad_button"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/scaredlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sleepy_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sad_button" />
+
+    <Button
+        android:id="@+id/sleepy_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/scared_button"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sleepy_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/playful_button"
+        app:layout_constraintTop_toBottomOf="@+id/scared_button" />
+
+    <ImageView
+        android:id="@+id/scared_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/scaredlogo"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/sleepy_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/sad_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+/>
+    <!--<Button-->
+        <!--android:id="@+id/scared_button"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:layout_marginEnd="24dp"-->
+        <!--android:layout_marginStart="24dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:text="@string/scared_button"-->
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/concert_one"
+        android:text="@string/mainTitle"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/sad_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

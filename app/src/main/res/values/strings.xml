@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">catemotion</string>
+    <string name="sadcat_title">Sad Cat</string>
+    <string name="sadcat_button"></string>
+    <string name="sadcatimg" />
+    <string name="playful_title">Playful Cat</string>
+    <string name="playfulcatpic">happycatpic</string>
+    <string name="scaredcatimg">scaredcatimg</string>
+    <string name="scared_cat">Scared Cat</string>
+    <string name="sleepy_cat">Sleepy Cat</string>
+    <string name="sleepycatimg">sleepycatimg</string>
+    <string name="playful_button">Playful Cat</string>
+    <string name="scared_button">Scared Cat</string>
+    <string name="sleepy_button">Sleepy Cat</string>
+    <string name="mainTitle">Cat Emotions</string>
+</resources>
