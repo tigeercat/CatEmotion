@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:background="#fffcf0">
 
-    <Button
+    <ImageView
         android:id="@+id/sad_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -16,7 +16,10 @@
         android:layout_marginBottom="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
-        android:text="@string/sadcat_button"
+        android:src="@drawable/sadlogo"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/playful_button"
         app:layout_constraintEnd_toStartOf="@+id/scared_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +27,7 @@
 
 
 
-    <Button
+    <ImageView
         android:id="@+id/playful_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -33,13 +36,16 @@
         android:layout_marginBottom="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/scaredlogo"
+        android:src="@drawable/playfullogo"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sleepy_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sad_button" />
 
-    <Button
+    <ImageView
         android:id="@+id/sleepy_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -49,7 +55,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/sleepy_button"
+        android:src="@drawable/scaredlogo"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
