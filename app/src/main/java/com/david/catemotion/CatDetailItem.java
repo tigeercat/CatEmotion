@@ -2,8 +2,9 @@ package com.david.catemotion;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-//ctrl shift A
+/*
+This class is used for creating constructors for the CatDetailItem, and setting up the Parcel
+ */
 public class CatDetailItem implements Parcelable {
     public int image;
     public String description;

@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-
-
 public class SplashActivity extends Activity {
-
     Handler handler;
+    /*
+    This method tells the splash screen to stay for 3 seconds, then go to main
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,5 @@ public class SplashActivity extends Activity {
                 finish();
             }
         },3000);
-
-    }
+    }//end of onCreate
 }

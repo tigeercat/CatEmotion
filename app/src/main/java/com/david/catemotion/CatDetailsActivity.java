@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
 public class CatDetailsActivity extends AppCompatActivity {
     public static final String ARGUMENT_TITLE = "com.david.catemotion.CatDetailsActivity.ARGUMENT_TITLE";
     public static final String ARGUMENT_CATS = "com.david.catemotion.CatDetailsActivity.ARGUMENT_CATS";
@@ -18,8 +17,6 @@ public class CatDetailsActivity extends AppCompatActivity {
     LinearLayout sliderDotspanel;
     private int dotscount;
     private ImageView[] dots;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,37 +25,28 @@ public class CatDetailsActivity extends AppCompatActivity {
         TextView titleTextView = findViewById(R.id.sadcat_title);
         titleTextView.setText(title);
         viewPager = findViewById(R.id.viewPager);
-
         sliderDotspanel = findViewById(R.id.SliderDots);
         ArrayList<CatDetailItem> details = getIntent().getParcelableArrayListExtra(ARGUMENT_CATS);
-
-
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, details.toArray(new CatDetailItem[details.size()]));
-
         viewPager.setAdapter(viewPagerAdapter);
-
         dotscount = viewPagerAdapter.getCount();
         dots = new ImageView[dotscount];
-
+        /*
+        This method adds an inactive dot into the linear layout of the amount of getCount()
+         */
         for (int i = 0; i < dotscount; i++) {
-
             dots[i] = new ImageView(this);
             dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.nonactive_dot));
-
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
             params.setMargins(1, 1, 1, 1);
-
             sliderDotspanel.addView(dots[i], params);
-
         }
-
+        /*
+        This sets the dots to the image you are on, when you slide it makes i got up 1, which moves
+        the active dot over to next dot
+         */
         dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
-
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
             @Override
             public void onPageSelected(int position) {
                 for (int i = 0; i < dotscount; i++) {
@@ -66,12 +54,13 @@ public class CatDetailsActivity extends AppCompatActivity {
                 }
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
             }
-
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
             @Override
             public void onPageScrollStateChanged(int state) {
 
             }
         });
-
-    }
+    }//end of onCreate
 }

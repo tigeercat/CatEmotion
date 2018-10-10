@@ -7,50 +7,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.github.chrisbanes.photoview.PhotoView;
 
-
-
-
-
 public class ViewPagerAdapter extends PagerAdapter {
-
     private Context context;
     private LayoutInflater layoutInflater;
-//    private Integer[] images = {R.drawable.sadcat, R.drawable.sadcat2};
-//    private String[] texts  = {"Sad cat Pepper", "Sad cat Meme"};
     private CatDetailItem[] details;
-//
-////
-//   if ( layout ==sad )
-////        images = sadcatimages;
-////        texts = sadtexts;
-////        if ellse  layout == playful
-////        images = playfulimages
-//
-//    public Integer[] sadcatimages = {R.drawable.sadcat, R.drawable.sadcat2};
-//      public String[] sadcattexts = {"Sad cat Pepper", "Sad cat Meme"};
-//
-//
-//   private Integer[] playfulimages = {R.drawable.playfulcat, R.drawable.playfulcat2};
-//    private String[] playfultexts = {"meow lol", "meow haha hehe mow"};
-
-
     public ViewPagerAdapter(Context context, CatDetailItem[] details) {
         this.context = context;
         this.details = details;
     }
+    /*
+    This method gets the count of objects inside details
+     */
     @Override
     public int getCount() {
         return details.length;
     }
-
+    /*
+    This method checks if the view and object are equal
+     */
     @Override
     public  boolean isViewFromObject(View view, Object object){
         return view == object;
     }
-
+    /*
+    This method inflates the custom_layout with image and text, and puts it
+    inside of a ViewPager, for the image slider
+     */
     @Override
     public Object instantiateItem(ViewGroup container, final int position){
 
@@ -64,6 +48,9 @@ public class ViewPagerAdapter extends PagerAdapter {
         vp.addView(view, 0);
         return view;
     }
+    /*
+    this method removes a view(pic / text) from the viewpager
+     */
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         ViewPager vp = (ViewPager) container;
