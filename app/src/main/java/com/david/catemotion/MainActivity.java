@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                         " she has a pooStache.."));
                 details.add(new CatDetailItem(R.drawable.sadcat4, "This is Molly, the sleepy cold cat, she decided" +
                         " to sleep outside in the potplant!"));
-                details.add(new CatDetailItem(R.drawable.sadcat5, "This is Molly, the sleepy cold cat, she decided"));
+                details.add(new CatDetailItem(R.drawable.sadcat5, "This is Nermal, she is very sleepy after a day of" +
+                        " catching ratz."));
                 details.add(new CatDetailItem(R.drawable.sadcat6, "This is Kimye, she is sad because" +
                         " she got woken up by her owner. :("));
                 intent.putParcelableArrayListExtra(CatDetailsActivity.ARGUMENT_CATS, details);
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<CatDetailItem> details = new ArrayList<>();
                 details.add(new CatDetailItem(R.drawable.scaredcat, "This is Grey, he" +
                         " had just moved from New Plymouth to Hamilton and was scared."));
-                details.add(new CatDetailItem(R.drawable.scaredcat2, "This is , she" +
+                details.add(new CatDetailItem(R.drawable.scaredcat2, "This is Nessie, she" +
                         " is spooked because she saw a ghost."));
                 details.add(new CatDetailItem(R.drawable.scaredcatlucy, "This is Lucy, she" +
                         " is scared because her mean owner made her wear HUMAN glasses. :("));
